@@ -5,6 +5,29 @@ public class ProgramInterface {
 
     public ProgramInterface() {}
 
+    public Matrix createMatrix(int counter) {
+        Scanner scanner = new Scanner(System.in);
+        if (counter == 0) {
+            System.out.print("Enter size of matrix: ");
+        } else if (counter == 1) {
+            System.out.print("Enter size of first matrix: ");
+        } else if (counter == 2) {
+            System.out.print("Enter size of second matrix: ");
+        }
+        int row = scanner.nextInt();
+        int column = scanner.nextInt();
+        Matrix matrix = new Matrix(row, column);
+        if (counter == 0) {
+            System.out.println("Enter matrix: ");
+        } else if (counter == 1) {
+            System.out.println("Enter first matrix: ");
+        } else if (counter == 2) {
+            System.out.println("Enter second matrix: ");
+        }
+        matrix.fillMatrix(scanner);
+        return matrix;
+    }
+
 
     public void start() {
         while (true) {
@@ -157,29 +180,4 @@ public class ProgramInterface {
         }
         System.out.println();
     }
-
-
-    public Matrix createMatrix(int counter) {
-        Scanner scanner = new Scanner(System.in);
-        if (counter == 0) {
-            System.out.print("Enter size of matrix: ");
-        } else if (counter == 1) {
-            System.out.print("Enter size of first matrix: ");
-        } else if (counter == 2) {
-            System.out.print("Enter size of second matrix: ");
-        }
-        int row = scanner.nextInt();
-        int column = scanner.nextInt();
-        Matrix matrix = new Matrix(row, column);
-        if (counter == 0) {
-            System.out.println("Enter matrix: ");
-        } else if (counter == 1) {
-            System.out.println("Enter first matrix: ");
-        } else if (counter == 2) {
-            System.out.println("Enter second matrix: ");
-        }
-        matrix.fillMatrix(scanner);
-        return matrix;
-    }
-
 }

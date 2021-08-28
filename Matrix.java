@@ -9,12 +9,14 @@ public class Matrix {
     double[][] matrix;
     boolean printError;
 
+
     public Matrix(int rows, int columns) {
         this.rows = rows;
         this.columns = columns;
         this.matrix = new double[rows][columns];
         this.printError = false;
     }
+
 
     public int getRows() {
         return this.rows;
@@ -30,6 +32,7 @@ public class Matrix {
         this.printError = value;
     }
 
+
     public double calculateDeterminant(double[][] matrix, int n) {
         double determinant = 0;
         int sign = 1;
@@ -43,6 +46,7 @@ public class Matrix {
         return determinant;
     }
 
+
     public Matrix getCofactorMatrix(Matrix matrix, int n) {
         Matrix returnMatrix = new Matrix(matrix.getRows(), matrix.getColumns());
         for (int i = 0; i < matrix.getRows(); i++) {
@@ -52,6 +56,7 @@ public class Matrix {
         }
         return returnMatrix;
     }
+
 
     public double[][] getReducedMatrix(double[][] matrix, int p, int q, int n) {
         double[][] reducedMatrix = new double[n][n];
@@ -71,6 +76,7 @@ public class Matrix {
         return reducedMatrix;
     }
 
+
     public Matrix horizontalTranspose(Matrix matrix) {
         Matrix returnMatrix = new Matrix(matrix.getRows(), matrix.getColumns());
         for (int i = 0; i < matrix.getRows(); i++) {
@@ -80,6 +86,7 @@ public class Matrix {
         }
         return returnMatrix;
     }
+
 
     public Matrix verticalTranspose(Matrix matrix) {
         Matrix returnMatrix = new Matrix(matrix.getRows(), matrix.getColumns());
@@ -91,6 +98,7 @@ public class Matrix {
         return returnMatrix;
     }
 
+
     public Matrix sideTranspose(Matrix matrix) {
         Matrix returnMatrix = new Matrix(matrix.getRows(), matrix.getColumns());
         for (int i = 0; i < matrix.getRows(); i++) {
@@ -101,6 +109,7 @@ public class Matrix {
         return returnMatrix;
     }
 
+
     public Matrix mainTranspose(Matrix matrix) {
         Matrix returnMatrix = new Matrix(matrix.getRows(), matrix.getColumns());
         for (int i = 0; i < matrix.getRows(); i++) {
@@ -110,6 +119,7 @@ public class Matrix {
         }
         return returnMatrix;
     }
+
 
     public Matrix multiplyByMatrix(Matrix matrixB) {
         Matrix returnMatrix = new Matrix(this.rows, matrixB.getColumns());
@@ -130,6 +140,7 @@ public class Matrix {
         }
     }
 
+
     public Matrix multiplyByConstant(double constant) {
         Matrix returnMatrix = new Matrix(this.rows, this.columns);
         for (int i = 0; i < this.rows; i++) {
@@ -139,6 +150,7 @@ public class Matrix {
         }
         return returnMatrix;
     }
+
 
     public Matrix addMatrix(Matrix matrixB) {
         Matrix returnMatrix = new Matrix(matrixB.getRows(), matrixB.getColumns());
@@ -154,6 +166,7 @@ public class Matrix {
         return returnMatrix;
     }
 
+
     public void fillMatrix(Scanner scanner) {
         for (int i = 0; i < this.rows; i++) {
             for (int j = 0; j < this.columns; j++) {
@@ -162,6 +175,7 @@ public class Matrix {
         }
     }
 
+    
     public void printMatrix() {
         DecimalFormat df = new DecimalFormat("#.##");
         for (int i = 0; i < this.rows; i++) {
