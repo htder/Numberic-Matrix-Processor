@@ -120,7 +120,7 @@ public class ProgramInterface {
         Matrix transposedMatrix = matrix.verticalTranspose(matrix);
         transposedMatrix.printMatrix();
     }
-    
+
     public void horizontalDiagonal(Matrix matrix) {
         Matrix transposedMatrix = matrix.horizontalTranspose(matrix);
         transposedMatrix.printMatrix();
