@@ -1,9 +1,7 @@
 package processor;
 import java.text.DecimalFormat;
-import java.util.Arrays;
 import java.util.Scanner;
 
-import static java.lang.Math.round;
 
 public class Matrix {
     int rows;
