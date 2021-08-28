@@ -10,10 +10,10 @@ Available operations include:
 - Calculating the determinant of a matrix
 - Calculating the inverse of a matrix
 - Transposing a matrix (transposing options include):
-  -Transpose on the main diagonal
-  -Transpose on the side diagonal
-  -Transpose vertically
-  -Transpose horizontal
+  - Transpose on the main diagonal
+  - Transpose on the side diagonal
+  - Transpose vertically
+  - Transpose horizontal
 
 Concepts learned include:
 
