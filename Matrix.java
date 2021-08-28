@@ -175,7 +175,7 @@ public class Matrix {
         }
     }
 
-    
+
     public void printMatrix() {
         DecimalFormat df = new DecimalFormat("#.##");
         for (int i = 0; i < this.rows; i++) {
